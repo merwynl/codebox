@@ -1,0 +1,17 @@
+# _site
+# .sass-cache
+# .directory
+Thumbs.db
+_draft
+.idea
+.vscode
+# .ruby-version
+# Gemfile.lock
+
+# PythonTools configuration, compiled source, & cached files
+bin/builds/PythonTools/Plugins/Intermediate/*
+bin/builds/PythonTools/DerivedDataCache/*
+bin/builds/PythonTools/Saved/*
+bin/builds/PythonTools/Intermediate/*
+docs/ja-JP/build/*
+docs/en-UK/build/*
