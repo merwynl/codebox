@@ -12,6 +12,7 @@ _draft
 bin/builds/PythonTools/Plugins/Intermediate/*
 bin/builds/PythonTools/DerivedDataCache/*
 bin/builds/PythonTools/Saved/*
+bin/builds/PythonTools/.vs/*
 bin/builds/PythonTools/Intermediate/*
 docs/ja-JP/build/*
 docs/en-UK/build/*
