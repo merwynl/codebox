@@ -46,7 +46,7 @@ print(phrase[-1])
 phrase = "White Midnight"
 print(phrase[0:5])
 
-# String slicing - same as above, except without specifying a given start
+# String slicing - same as above, except without specifying a given start.
 phrase = "White Midnight"
 print(phrase[:5])
 
@@ -122,7 +122,8 @@ print(phrase[1])
 phrase = "\"神様になった日\""
 print(phrase.index("日\""))
 
-# Replaces an existing value with a different one. Takes two arguments, first bring the target & second being the target value
+# Replaces an existing value with a different one. Takes two arguments, first being the target & second being the
+# target value.
 phrase = "\"神様になった日\""
 print(phrase.replace("日", "月"))
 
