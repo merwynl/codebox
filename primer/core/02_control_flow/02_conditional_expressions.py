@@ -45,13 +45,7 @@ else:
 
 # If statement that compares different values and prints the largest of three provided argument values
 def max_num(num1, num2, num3):
-    """[summary]
-    
-    Arguments:
-        num1 {[type]} -- [description]
-        num2 {[type]} -- [description]
-        num3 {[type]} -- [description]
-    """
+
     if num1 >= num2 and num1 >= num3:
         return num1
     elif num2 >= num1 and num2 >= num3:
