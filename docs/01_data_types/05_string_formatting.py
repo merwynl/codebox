@@ -1,5 +1,5 @@
 """
-[summary]
+[String formatting]
 """
 
 # String formatting or f-string
