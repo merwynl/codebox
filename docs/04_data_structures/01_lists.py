@@ -1,9 +1,13 @@
 """
-[summary]
+Collections = single variable to store multiple values.
+List = [] ordered and mutable. Duplicates OK.
+Sets = {} unordered and immutable but Add/Remove OK. NO duplicates.
+Tuples = () ordered and immutable. Duplicates OK. Faster.
 """
 
-# Index in Python starts at 0
-singers = ['れをる', 'あいみょん', 'えなこ', 'みゆな']
+# Creating a list and printing that list. Index of 0
+fruits = ['apple', 'orange', 'banana', 'coconut']
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
 
 # Lists can take in more than one data type
 combined = ['れをる', str(2), True, str(1.256)]
@@ -13,82 +17,125 @@ print (combined)
 print(singers)
 
 # Prints the index value from the list
-print(singers[0])
+print(fruits[0])
 
-# Prints the last index value from the list or the first item from the end of the list
+# Prints the last index value from the list, or the first item from the end of the list.
 print(singers[-1])
 
-# Prints the values from the list starting with the given index
+# Prints the values from the list starting with the given index.
 print(singers[2:])
 
-# Prints from a range of index values in a given list
+# Prints from a range of index values in a given list.
 print(singers[1:3])
 
-# The :: indicates a step and this therefore prints out every second item in the list starting from the first item
-番号 = list(range(20))
-print(番号[::2])
+# Prints a list in reverse order
+print(singers[::-1])
+
+# The :: indicates a step, and this therefore prints out every second item in the list starting from the first item.
+number = list(range(20))
+print(number[::2])
+
+#  Using for loops to iterate on a list. Prints each item in a list.
+fruits = ['apple', 'orange', 'banana', 'coconut']
+for fruit in fruits:
+    print(fruit)
+
+# Lists the available attributes and methods of a given object.
+fruits = ['apple', 'orange', 'banana', 'coconut']
+print(dir(fruits))
+
+# Prints out an avialble help guide on available functions
+fruits = ['apple', 'orange', 'banana', 'coconut']
+print(help(fruits))
+
+# Prints the length of a given list, or the amount elements.
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
+print(len(singers))
+
+# Returns a boolean if a given value is inside a list
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
+print('れをる' in singers)
+
+# This will print False because it is looking for a string.
+numbers = [0,1,2,3,4,5]
+print ('1' in numbers)
 
 # Unpacking & packing a lists by assigning multiple variables & using the * designator
-番号 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-first, second, third, *other= 番号
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+first, second, third, *other= number
 print (other)
 
 # Replaces the index value with another value
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
 singers[1] = '鈴木里奈'
 print(singers[1])
 
 # Extends a list by adding another list to the existing
+combined = ['れをる', str(2), True, str(1.256)]
 singers.extend(combined)
 print(singers)
 
-# Appends a single item to the end of an existing list
-singers.append('さやか')
+# Appends a single item to the end of an existing list.
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
+singers.append('げん')
 print(singers)
 
-# Inserts a single list item into a specified index value
+# Inserts a single list item into a specified index.
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
 singers.insert(0, 'まみ佐崎')
 print(singers)
 
 # Removes a single item from a list
-singers.remove('えなこ')
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
+singers.remove('ミセカイ')
 print(singers)
 
-# Removes a single item from a list using the del designator based on the index value
+# Removes a single item from a list using the del designator based on the index value.
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
 del singers[1]
 print (singers)
 
-# Removes a range if items from a list using the del designator based on the index value
+# Removes a range if items from a list using the del designator based on the index value.
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
 del singers[2:3]
 print (singers)
 
-# Removes/pops the last element of a list
+# Removes/pops the last element of a list.
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
 singers.pop()
 print(singers)
 
 # Checks to see if a certain item is within a list.
-# If there are more than one instance, it prints out the first occurrence
+# If there are more than one instance, it prints out the first occurrence.
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
 print(singers.index('みゆな'))
 
-# Counts the number of instance in a specified value appears inside a list
-print(singers.count('れをる'))
+# Counts the amount of instance in a specified value appears inside a list.
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
+print(singers.count('みゆな'))
 
-# Sorts a list in ascending order. Does not work if the list contains more tha one datatype
+# Sorts a list in ascending order. Does not work if the list contains more than one datatype.
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
 singers.sort()
 print(singers)
 
-# Uses the built-in sort function to sort a list in ascending order into a new list. Does not modify the original
-print(sorted(singers))
-
 # Sorts the list in reverse order
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
 singers.sort(reverse=True)
 print(singers)
 
-# Uses the built-in sort function to sort a list in reverse order into a new list. Does not modify the original
-print(sorted(singers, reverse=True))
-
 # Reverses the order of a list
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
 singers.reverse()
 print(singers)
+
+# Uses the built-in sort function to sort a list in ascending order into a new list. Does not modify the original.
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
+print(sorted(singers))
+
+# Uses the built-in sort function to sort a list in reverse order into a new list. Does not modify the original.
+singers = ['れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな']
+print(sorted(singers, reverse=True))
 
 # Sorting a list of tuples based on a tuple index
 items = [
@@ -129,15 +176,15 @@ singers2 = singers.copy()
 singers2.extend(singers)
 print(singers2)
 
-# Clears an entire list/Empties a list
+# Clears and empties an entire list a list.
 singers.clear()
 print(singers)
 
-# Prints a range of numbers starting from index of 0 using the list & range function
+# Prints a range of numbers starting from an index of 0 using the list and range function.
 rang = list(range(20))
 print (rang)
 
-# Use multiplication to quickly print out a long list of the same item
+# Use multiplication to quickly print out a long list of the same item.
 zeroes = [0] * 100
 print (zeroes)
 
@@ -145,12 +192,13 @@ print (zeroes)
 chars = list('Hello')
 print (chars)
 
-# Returns a tuple of the list which consists of the item & the item's index. Use the enumerate function if you need the index
+# Returns a tuple of the list, which consists of the item & the item’s index. Use the enumerate function if you need
+# the index.
 letters = ['a', 'b', 'c']
 for letter in enumerate(letters):
     print (letter)
 
-# Getting a specific item from a tupled list by calling the index value. 
+# Getting a specific item from a tuple list by calling the index value.
 letters = ['a', 'b', 'c']
 for index, letter in enumerate(letters):
     print (index, letter)
