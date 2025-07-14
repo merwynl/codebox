@@ -1,16 +1,50 @@
 """
-[summary]
+Collections = single variable to store multiple values.
+List = [] ordered and mutable. Duplicates OK.
+Sets = {} unordered and immutable but Add/Remove OK. NO duplicates.
+Tuples = () ordered and immutable. Duplicates OK. Faster.
+Tuples should be used on data that you don't want changed/modified.
+
 """
 
-# Data structure that can store multiple forms of data
-# Tuples are immutable which means they can't be changed or modified
-# Tuples should be used on data that you don't want changed/modified
 # A single tuple
 coordinates = (4,5)
 
+# Using dir function to print the available functions for sets
+singers = ('れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな')
+print(dir(singers))
+
+# Using help function to print ta help guide of available functions.
+singers = ('れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな')
+print(help(singers))
+
 # A list of tuples
 listCoordinates = [(4,5), (6,7), (80,34)]
-# print(coordinates[0])
+print(coordinates[0])
+
+singers = ('れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな')
+numbers = (1,2,3,3,4)
+
+# Printing the length of a tuple
+singers = ('れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな')
+print(len(singers))
+
+#  Returns a boole if a value is within a tuple
+singers = ('れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな')
+print ("ミセカイ" in singers)
+
+#  Prints the index of a value inside a tuple. The first occurrence is returned if there are multiples.
+singers = ('れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな')
+print (singers.index("みゆな"))
+
+# Prints the number of occurrences an item appears inside a tuple.
+singers = ('れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな')
+print (singers.count("みゆな"))
+
+#  Iterating over a tuple with a for loop
+singers = ('れをる', 'みゆな', 'あいみょん', 'ミセカイ', 'みゆな')
+for singer in singers:
+    print(singer)
 
 # Converts a list into a tuple
 point = tuple([1,2])
