@@ -13,7 +13,7 @@ print (singers)
 fruits = {'apple', 'orange', 'banana', 'coconut'}
 print (dir(fruits))
 
-# Using help function to print ta help guide of available functions.
+# Using help function to print a help guide of available functions.
 fruits = {'apple', 'orange', 'banana', 'coconut'}
 print (help(fruits))
 
