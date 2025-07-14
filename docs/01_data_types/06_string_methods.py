@@ -1,11 +1,14 @@
 """
-[String Formatting]
+[String Methods & slicing]
 """
 
 # Strings are used to represent text
 name = 'hiroyuki'
 language = "日本語"
 place = """日本"""
+
+# Prints some helpful documentation on using str
+print(help(str))
 
 # Determining the length of a string
 song_name = 'White Midnight'
@@ -33,26 +36,6 @@ phrase = "神様になった日"
 feeling = "がかっこいい"
 full = f"{phrase}{feeling}"
 print(full)
-
-# String slicing - prints the first index of a string
-phrase = "White Midnight"
-print(phrase[0])
-
-# String slicing - prints the last index of a string
-phrase = "White Midnight"
-print(phrase[-1])
-
-# String slicing - prints a range of index. The last index is not included.
-phrase = "White Midnight"
-print(phrase[0:5])
-
-# String slicing - same as above, except without specifying a given start.
-phrase = "White Midnight"
-print(phrase[:5])
-
-# String slicing - prints from a specified index until the end
-phrase = "White Midnight"
-print(phrase[6:])
 
 # Makes a string entirely upper case
 phrase = "White midnight"
@@ -114,14 +97,6 @@ print(phrase.upper().isupper())
 phrase = "\"神様になった日\""
 print(len(phrase))
 
-# Prints out the value/character based on the assigned index
-phrase = "\"神様になった日\""
-print(phrase[1])
-
-# Returns the index value of the given supplied character
-phrase = "\"神様になった日\""
-print(phrase.index("日\""))
-
 # Replaces an existing value with a different one. Takes two arguments, first being the target & second being the
 # target value.
 phrase = "\"神様になった日\""
@@ -148,7 +123,48 @@ print("Σ/神様になった日")
 #  Checks of all the given characters are alphabetical letter
 print("hello".isalpha())
 
-# Checks if all the given characters are numerical value
+# Checks if all the given characters are numerical value`
 print("123".isdigit())
 
+# Returns the index value of the given supplied character
+phrase = "\"神様になった日\""
+print(phrase.index("日\""))
+
+# Prints out the value/character of the given index
+phrase = "\"神様になった日\""
+print(phrase[1])
+
+# String slicing - prints the first index of a string
+phrase = "White Midnight"
+print(phrase[0])
+
+# String slicing - prints the last index of a string
+phrase = "White Midnight"
+print(phrase[-1])
+
+# String slicing - prints a range of index. The last index is not included.
+phrase = "White Midnight"
+print(phrase[0:5])
+
+# String slicing - same as above, except without specifying a given start. Assumes an index 0
+phrase = "White Midnight"
+print(phrase[:5])
+
+# String slicing - prints from a specified index until the end
+phrase = "White Midnight"
+print(phrase[6:])
+
+# String slicing - prints out every 2nd character
+phrase = "White Midnight"
+print(phrase[::2])
+
+# Accessing the last four index values
+credit_number = "1234-5678-9012-3456"
+last_digits = credit_number[-4:]
+print (f"xxxx-xxxx-xxxx-{last_digits}")
+
+# Reverses the characters in a string
+credit_number = "1234-5678-9012-3456"
+credit_number = credit_number[::-1]
+print (credit_number)
 

@@ -5,7 +5,7 @@ import math
 name = input("Greetings, please enter your name: ")
 
 # Asking the user’s age. Input value has to be type converted before incrementing else it will be treated as a str.
-# Inout values is enclosed in qa typecast to remove an extra line.
+# Input values are enclosed in a typecast to remove an extra line.
 age = int(input("What is your age: "))
 age += 1
 

@@ -15,6 +15,9 @@ else:
 """
 Use an 'or' conditional statement if you want more than one variable to be paseed through"
 "Only requires one of the provided conditions to be true
+
+Note on Or truthy statements
+https://stackoverflow.com/questions/20002503/why-does-a-x-or-y-or-z-always-evaluate-to-true-how-can-i-compare-a-to-al
 """
 is_man = True
 is_tall = True

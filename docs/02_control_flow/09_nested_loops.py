@@ -1,44 +1,35 @@
 """
-[summary]
+Nested loops: A loop within another loop (outer, inner)
+for x in y:
+    for a in b:
+
 """
 
-# Simple for loop that prints each individual character/letter in the given string
-word = '東京市大学院'
-for letter in word:
-    print(letter)
+# Repeats the inner loop 3 times
+for x in range(3):
+    for y in range(1,10):
+        print(y, end=" ")  # Printing all the results of x on the same line
 
-# For each item in the list, that item gets printed out
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for music in songs:
-    print(music)
+# Repeats the inner loop 3 times. Adds an empty print to the outer loop as a linebreak
+for x in range(3):
+    for y in range(1,10):
+        print(y, end=" ")  # Printing all the results of x on the same line
+    print()
 
-# Prints each single numbered value up to a specific value index
-for index in range(10):
-    print(index)
+# Repeats the inner loop 3 times. Prints each character on an individual line/
+for x in range(3):
+    for y in range(1,10):
+        print(y, end="\n")  # Printing all the results of x on the same line
 
-# Prints each single numbered value based on a given range
-for i in range(3, 15):
-    print('The value for i is ' + str(i))
+#  Prints a specified amount of column and row of symbols.
+rows = int(input("Enter the # of rows: "))
+columns = int(input("Enter the # of columns: "))
+symbol = input("Enter a symbol to use: ")
 
-# Prints out all of the elements in that list based on its index value
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    print(songs[index])
-
-# Prints out the index value of each item in the list
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    print(index)
-
-# Prints out the index value of each item in the list
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    if index == 0:
-        print('First Track = ' + str(songs[index]))
-    elif index == 1:
-        print('Second Track = ' + str(songs[index]))
-    else:
-        print('Unknown Track = ' + str(songs[index]))
+for x in range(rows):
+    for y in range(columns):
+        print(symbol, end="")  # Printing all the results of x on the same line
+    print()
 
 # Lists contained within a list. Each new list can be treated as a row and column
 number_grid = [
