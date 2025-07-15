@@ -1,54 +1,61 @@
 """
-[summary]
+Match-case statements(switch): An alternative to using many elif statements
+                        Execute some code if a value matches a 'case'
+                        Benefit: Cleaner and syntax is more readable.
 """
-
-# Simple for loop that prints each individual character/letter in the given string
-word = '東京市大学院'
-for letter in word:
-    print(letter)
-
-# For each item in the list, that item gets printed out
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for music in songs:
-    print(music)
-
-# Prints each single numbered value up to a specific value index
-for index in range(10):
-    print(index)
-
-# Prints each single numbered value based on a given range
-for i in range(3, 15):
-    print('The value for i is ' + str(i))
-
-# Prints out all of the elements in that list based on its index value
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    print(songs[index])
-
-# Prints out the index value of each item in the list
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    print(index)
-
-# Prints out the index value of each item in the list
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    if index == 0:
-        print('First Track = ' + str(songs[index]))
-    elif index == 1:
-        print('Second Track = ' + str(songs[index]))
+#  Long messy approach containing many if else statements
+def day_of_the_week(day):
+    if day == 1:
+        return "月曜日"
+    elif day == 2:
+        return "火曜日"
+    elif day == 3:
+        return "水曜日"
+    elif day == 4:
+        return "木曜日"
+    elif day == 5:
+        return "金曜日"
+    elif day == 6:
+        return "土曜日"
+    elif day == 7:
+        return "日曜日"
     else:
-        print('Unknown Track = ' + str(songs[index]))
+        return "無効な入力"
+print(day_of_the_week(1))
 
-# Lists contained within a list. Each new list can be treated as a row and column
-number_grid = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [0]
-]
+def day_of_the_week(day):
+    match day:
+        case 1:
+            return "月曜日"
+        case 2:
+            return "火曜日"
+        case 3:
+            return "水曜日"
+        case 4:
+            return "木曜日"
+        case 5:
+            return "金曜日"
+        case 6:
+            return "土曜日"
+        case 7:
+            return "日曜日"
+        case _: # _ denotes a wild card. Will be performed if there are no other matching statements
+            return "無効な入力"
 
-# For each row in the list, gets each column and for each value in each column, prints out that element
-for row in number_grid:
-    for column in row:
-        print(column)
+print(day_of_the_week(1))
+
+def is_weekend (day):
+    match day:
+        case "月曜日" | "火曜日" | "水曜日" | "木曜日" | "金曜日":
+            return False
+        case "monday" | "tuesday" | "wednesday" | "thursday" | "friday":
+            return False
+        case "土曜日" | "日曜日" | "sunday" | "Sunday" | "saturday" | "Saturday" :
+            return True
+        case _: # _ denotes a wild card. Will be performed if there are no other matching statements
+            return "無効な入力"
+
+print(is_weekend("月曜日"))
+
+
+

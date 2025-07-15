@@ -1,54 +1,56 @@
 """
-[summary]
+Membership operators = Used to test whether a value is found in a collection
+                       (string, list, tuple, set, dictionary)
+                       1. In
+                       2. Not in
 """
+# Checks if a letter is in a word
+word = "APPLE"
+letter = input("Guess a letter in the secret word: ")
+if letter.upper() in word:
+    print(f"{letter} was found!")
+else:
+    print(f"{letter} was not found!")
 
-# Simple for loop that prints each individual character/letter in the given string
-word = '東京市大学院'
-for letter in word:
-    print(letter)
+# Checks is a letter is not in a word
+word = "APPLE"
+letter = input("Guess a letter in the secret word: ")
+if letter.upper() not in word:
+    print(f"{letter} was not found!")
+else:
+    print(f"{letter} was found!")
 
-# For each item in the list, that item gets printed out
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for music in songs:
-    print(music)
+#  Checks for a string of characters within a set
+students = {"Spot", "John", "Ken", "Lisa"}
+student = input("Enter student's name: ")
+if student in students:
+    print(f"{student.capitalize()} is a registered student")
+else:
+    print(f"{student.capitalize()} was not found")
 
-# Prints each single numbered value up to a specific value index
-for index in range(10):
-    print(index)
+#  Checks id a string of characters is not within a set.
+students = {"Spot", "John", "Ken", "Lisa"}
+student = input("Enter student's name: ")
+if student.capitalize() not in students:
+    print(f"{student.capitalize()} was not found")
+else:
+    print(f"{student.capitalize()} is a registered student")
 
-# Prints each single numbered value based on a given range
-for i in range(3, 15):
-    print('The value for i is ' + str(i))
+# Checks if an item is within a dictionary
+grades = {"Lisa": "A",
+          "John": "C",
+          "Ken": "A+",
+          "Spot": "B"}
 
-# Prints out all of the elements in that list based on its index value
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    print(songs[index])
+student = input("Enter student's name: ")
+if student.capitalize() in grades:
+    print(f"{student}'s grader is {grades[student]}")
+else:
+    print(f"{student.capitalize()} was not found")
 
-# Prints out the index value of each item in the list
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    print(index)
-
-# Prints out the index value of each item in the list
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    if index == 0:
-        print('First Track = ' + str(songs[index]))
-    elif index == 1:
-        print('Second Track = ' + str(songs[index]))
-    else:
-        print('Unknown Track = ' + str(songs[index]))
-
-# Lists contained within a list. Each new list can be treated as a row and column
-number_grid = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [0]
-]
-
-# For each row in the list, gets each column and for each value in each column, prints out that element
-for row in number_grid:
-    for column in row:
-        print(column)
+# Checks if an email address is valid
+email = "mail@fakemail.com"
+if "@" in email and "." in email:
+    print("Valid email address.")
+else:
+    print("Invalid email address")
