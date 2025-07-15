@@ -1,54 +1,218 @@
 """
-[summary]
+Comprehension = A concise way to create sets, lists & dictionaries in python
+                Compact & easier to read than traditional loops
+                [expression for value in iterable if condition]
 """
 
-# Simple for loop that prints each individual character/letter in the given string
-word = '東京市大学院'
-for letter in word:
-    print(letter)
+import random
 
-# For each item in the list, that item gets printed out
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for music in songs:
-    print(music)
+# Standard for-loop for printing even numbers
+doubles = []
+for x in range(1,11):
+    doubles.append(x * 2)
+print(doubles)
 
-# Prints each single numbered value up to a specific value index
-for index in range(10):
-    print(index)
+# Using list comprehension to perform the above operation
+doubles = [x * 2 for x in range(1,11)]
+print(doubles)
 
-# Prints each single numbered value based on a given range
-for i in range(3, 15):
-    print('The value for i is ' + str(i))
+# Using list comprehension to print out a list range of values with a multiplication factor of 3
+triples = [y * 3 for y in range (1,11)]
+print(triples)
 
-# Prints out all of the elements in that list based on its index value
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    print(songs[index])
+# Using list comprehension to create a squares of values
+suqares = [pow(z, 2) for z in range(1,11)]
+print(suqares)
 
-# Prints out the index value of each item in the list
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    print(index)
+# Using list comprehension to create a cube of values
+cubes = [z * z * z for z in range(1,11)]
+print(cubes)
 
-# Prints out the index value of each item in the list
-songs = ['ミラージュ', '劣等上等', 'サイサキ']
-for index in range(len(songs)):
-    if index == 0:
-        print('First Track = ' + str(songs[index]))
-    elif index == 1:
-        print('Second Track = ' + str(songs[index]))
-    else:
-        print('Unknown Track = ' + str(songs[index]))
+# Using list comprehension to create a cube of values using pow function
+cubes = [pow(z, 3)for z in range(1,11)]
+print(cubes)
 
-# Lists contained within a list. Each new list can be treated as a row and column
-number_grid = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9],
-    [0]
-]
+# Using list comprehension to convert string values into uppercase
+fruits = ['apple', 'orange', 'banana', 'coconut']
+fruits = [fruit.upper() for fruit in fruits]
+print(fruits)
 
-# For each row in the list, gets each column and for each value in each column, prints out that element
-for row in number_grid:
-    for column in row:
-        print(column)
+# Using list comprehension to capitalize string values
+fruits = ['apple', 'orange', 'banana', 'coconut']
+fruits = [fruit.capitalize() for fruit in fruits]
+print(fruits)
+
+# Using list comprehension to store the first character of every string in a list.
+fruits = ['apple', 'orange', 'banana', 'coconut']
+fruit_char = [fruit[0] for fruit in fruits]
+print(fruit_char)
+
+# Returns a positive list of numbers
+numbers = [1,-2,3,-4,5,-6]
+positive_nums = [num for num in numbers if num>=0]
+print(positive_nums)
+
+# Returns a list of negative values using list comprehension
+numbers = [1,-2,3,-4,5,-6]
+negative_numbers = [num for num in numbers if num <=0]
+print(negative_numbers)
+
+# Checks to see if there are even numbers
+numbers = [1,-2,3,-4,5,-6,-7, 8, 9, 12,-15]
+even_nums = [num for num in numbers if num % 2 == 0]
+print(even_nums)
+
+# Checks to see if there are odd numbers
+numbers = [1,-2,3,-4,5,-6,-7, 8, 9, 12,-15]
+odd_nums = [num for num in numbers if num % 2 > 0]
+print(odd_nums)
+
+# Prints a list of passing grades if a grade value is above a certain condition.
+grades = [82, 42, 79, 90, 56, 61, 30]
+passing_grades = [grade for grade in grades if grade > 50]
+print(passing_grades)
+
+
+# Using list comprehension to perform the above operation
+doubles = [x * 2 for x in range(1,11)]
+print(doubles)
+
+# Using list comprehension to print out a list range of values with a multiplication factor of 3
+triples = [y * 3 for y in range (1,11)]
+print(triples)
+
+# Using list comprehension to create a squares of values
+suqares = [pow(z, 2) for z in range(1,11)]
+print(suqares)
+
+# Using list comprehension to create a cube of values
+cubes = [z * z * z for z in range(1,11)]
+print(cubes)
+
+# Using list comprehension to create a cube of values using pow function
+cubes = [pow(z, 3)for z in range(1,11)]
+print(cubes)
+
+# Using list comprehension to convert string values into uppercase
+fruits = ['apple', 'orange', 'banana', 'coconut']
+fruits = [fruit.upper() for fruit in fruits]
+print(fruits)
+
+# Using list comprehension to capitalize string values
+fruits = ['apple', 'orange', 'banana', 'coconut']
+fruits = [fruit.capitalize() for fruit in fruits]
+print(fruits)
+
+# Using list comprehension to store the first character of every string in a list.
+fruits = ['apple', 'orange', 'banana', 'coconut']
+fruit_char = [fruit[0] for fruit in fruits]
+print(fruit_char)
+
+# Returns a positive list of numbers
+numbers = [1,-2,3,-4,5,-6]
+positive_nums = [num for num in numbers if num>=0]
+print(positive_nums)
+
+# Returns a list of negative values using list comprehension
+numbers = [1,-2,3,-4,5,-6]
+negative_numbers = [num for num in numbers if num <=0]
+print(negative_numbers)
+
+# Checks to see if there are even numbers
+numbers = [1,-2,3,-4,5,-6,-7, 8, 9, 12,-15]
+even_nums = [num for num in numbers if num % 2 == 0]
+print(even_nums)
+
+# Checks to see if there are odd numbers
+numbers = [1,-2,3,-4,5,-6,-7, 8, 9, 12,-15]
+odd_nums = [num for num in numbers if num % 2 > 0]
+print(odd_nums)
+
+# Prints a list of passing grades if a grade value is above a certain condition.
+grades = [82, 42, 79, 90, 56, 61, 30]
+passing_grades = [grade for grade in grades if grade > 50]
+print(passing_grades)
+
+'''
+Set Comprehension
+'''
+
+# Using set comprehension to perform the above operation
+doubles = {x * 2 for x in range(1, 11)}
+print(doubles)
+
+# Using set comprehension to print out a list range of values with a multiplication factor of 3
+triples = {y * 3 for y in range(1, 11)}
+print(triples)
+
+# Using set comprehension to create a squares of values
+suqares = {pow(z, 2) for z in range(1, 11)}
+print(suqares)
+
+# Using set comprehension to create a cube of values
+cubes = {z * z * z for z in range(1, 11)}
+print(cubes)
+
+# Using set comprehension to create a cube of values using pow function
+cubes = {pow(z, 3) for z in range(1, 11)}
+print(cubes)
+
+# Using set comprehension to convert string values into uppercase
+fruits = {'apple', 'orange', 'banana', 'coconut'}
+fruits = {fruit.upper() for fruit in fruits}
+print(fruits)
+
+# Using set comprehension to capitalize string values
+fruits = {'apple', 'orange', 'banana', 'coconut'}
+fruits = {fruit.capitalize() for fruit in fruits}
+print(fruits)
+
+# Using set comprehension to store the first character of every string in a list.
+fruits = {'apple', 'orange', 'banana', 'coconut'}
+fruit_char = {fruit[0] for fruit in fruits}
+print(fruit_char)
+
+# Returns a positive set of numbers.
+numbers = {1, -2, 3, -4, 5, -6}
+positive_nums = {num for num in numbers if num >= 0}
+print(positive_nums)
+
+# Returns a set of negative values using set comprehension
+numbers = {1, -2, 3, -4, 5, -6}
+negative_numbers = [num for num in numbers if num <=0]
+print(negative_numbers)
+
+# Checks to see if there are even numbers in a set.
+numbers = {1, -2, 3, -4, 5, -6, -7, 8, 9, 12, -15}
+even_nums = {num for num in numbers if num % 2 == 0}
+print(even_nums)
+
+# Checks to see if there are odd numbers in a set.
+numbers = {1, -2, 3, -4, 5, -6, -7, 8, 9, 12, -15}
+odd_nums = [num for num in numbers if num % 2 > 0]
+print(odd_nums)
+
+# Prints a set of passing grades if a grade value is above a certain condition.
+grades = {82, 42, 79, 90, 56, 61, 30}
+passing_grades = {grade for grade in grades if grade > 50}
+print(passing_grades)
+
+'''
+Dictionary Comprehension
+'''
+# Using dictionary comprehension to print out even number
+values = {x: x * 2 for x in range(1,11)}
+print(values)
+
+# Using dictionary comprehension to assign a random fruit to a person.
+students = ["Spot", "John", "Ken", "Lisa"]
+fruits = ['apple', 'orange', 'banana', 'coconut']
+fruits = {student:random.choice(fruits) for student in students}
+print(fruits)
+
+# Using dictionary comprehension to assign a random number to a person.
+students = ["Spot", "John", "Ken", "Lisa"]
+number = {student: random.randint(1, len(students)) for student in students}
+print(number)
+
+
