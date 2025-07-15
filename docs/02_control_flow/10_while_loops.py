@@ -13,10 +13,8 @@ num = 100
 while i <= num:
     print(i)
     i += 1
-
     # alternate method of incrementing
     # i = i +1
-
 print('Done!')
 
 # Keep prompting the user until name is provided
@@ -27,7 +25,7 @@ while name == "":
 else:
     print(f"Hello {name}")
 
-#  Keep prompting the user until a positive number indicating their age has been provided
+# Prompting user until a positive number indicating their age has been provided.
 age = int(input("Please enter your age: "))
 while age < 0:
     print ("Age cannot be less than 0")
@@ -35,7 +33,7 @@ while age < 0:
 else:
     print(f"You are {age} years old")
 
-# Keep prompting and printing a users favourite food until q is entered
+# Keep prompting and printing a users favourite food until q is entered.
 food = input("Enter a food you like (q to quit): ")
 
 while not food == "q":
@@ -43,7 +41,7 @@ while not food == "q":
     food = input("Enter a food you like (q to quit): ")
 print("Bye!")
 
-# Keeps prompting the user to enter a valid number between 1-10
+# Keeps prompting the user to enter a valid number between 1-10.
 num = int(input("Enter a # between 1 - 10: "))
 while num < 1 or num > 10:
     print(f"{num} is not valid")
