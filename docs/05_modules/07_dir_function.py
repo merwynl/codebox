@@ -1,10 +1,5 @@
-#################
-# Modules
-#################
-import sys
-
-sys.path.append(r'D:/git-dev/pylab/primer/07_modules/')
-
-from tools import useful_tools
-
-print(useful_tools.roll_dice(10))
+"""
+Module = A file containing code you want to include in your program
+         Use 'import' to include a module (built-in or your own)
+         Useful to break up a large program into reusable separate files.
+"""
