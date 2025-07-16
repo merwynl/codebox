@@ -1,0 +1,5 @@
+
+'''
+
+PYQT5 - Checkboxes
+'''
