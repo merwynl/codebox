@@ -16,3 +16,6 @@ bin/builds/PythonTools/.vs/*
 bin/builds/PythonTools/Intermediate/*
 docs/ja-JP/build/*
 docs/en-UK/build/*
+
+# PyCache Files 
+.pyc
