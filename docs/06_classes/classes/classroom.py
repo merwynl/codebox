@@ -1,9 +1,4 @@
 
-#################
-# Classes
-#################
-
-
 # Class essentially allows us to create our own data type
 class Student:
     # Maps out what attributes a student will have
@@ -13,7 +8,7 @@ class Student:
         self.gpa = gpa
         self.is_on_probation = is_on_probation
 
-    # Function for
+    # Function for determining honor roll
     def on_honor_roll(self):
         if self.gpa >= 3.5:
             return True
