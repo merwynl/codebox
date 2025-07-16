@@ -56,3 +56,8 @@ def create_name(first,last):
 	return first + " " + last
 print(create_name('some', 'name'))
 
+# Print seperator
+def print_range():
+    print("1","2","3","4","5", sep="-")
+    return 0
+print_range()
