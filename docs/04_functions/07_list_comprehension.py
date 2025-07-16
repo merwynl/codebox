@@ -52,6 +52,11 @@ numbers = [1,-2,3,-4,5,-6]
 positive_nums = [num for num in numbers if num>=0]
 print(positive_nums)
 
+# Returns 3 random ints within a specified range.
+# _ denotes every iteration in a list
+positive_nums = [random.randint(1,20) for _ in range(3)]
+print(positive_nums)
+
 # Returns a list of negative values using list comprehension
 numbers = [1,-2,3,-4,5,-6]
 negative_numbers = [num for num in numbers if num <=0]
