@@ -18,4 +18,4 @@ docs/ja-JP/build/*
 docs/en-UK/build/*
 
 # PyCache Files 
-.pyc
+*.pyc
