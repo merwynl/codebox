@@ -10,7 +10,7 @@ Class variables = shared amongst all instances of a class
 class Student:
     # Self refers to the object we're currently working with. Used to access vars that belong to the class.
 
-    # Declaring a class var. All objects that invoke this class will have access to all these vars.
+    # Declaring a class var. All objects & instances that invoke this class will have access to all these vars.
     class_year = 2024
     num_students = 0
 
