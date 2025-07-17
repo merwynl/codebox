@@ -20,12 +20,6 @@ def print_range( max, min = 1 ,step = 1):
     return 0
 print_range(21, min=0, step=2)
 
-# Print seperator
-def print_range():
-    print("1","2","3","4","5", sep="-")
-    return 0
-print_range()
-
 # Using keyword args to print a phone number
 def get_phone(country, area, first, last):
     return f"+{country}-{area}-{first}-{last}"

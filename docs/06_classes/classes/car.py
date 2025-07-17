@@ -2,9 +2,10 @@
 
 # Creating a class object of type Car
 class Car:
+
     # Constructor needed to create objects. Methods are functions within a class. Passing args to a method.
     def __init__(self, model, year, color, type, for_sale):
-        # Assigning args to variables
+        # Assigning args to variables or instance attributes
         self.model = model.capitalize()
         self.year = year
         self.color = color
@@ -23,3 +24,4 @@ class Car:
             print(f"The {self.year} {self.color} {self.model} {self.type} is for sale.")
         else:
             print(f"The {self.year} {self.color} {self.model} {self.type} is not for sale.")
+

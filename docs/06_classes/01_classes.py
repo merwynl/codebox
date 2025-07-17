@@ -7,6 +7,7 @@ Class = Blueprint used to design the structure and layout of an object
 """
 
 from classes.car import Car
+from classes.classroom import Student
 
 # Invoking a class object & assigning some value to the parameters
 car1 = Car("toyota", "2025", "silver", "sedan", False)
@@ -34,6 +35,12 @@ car2.stop()
 # Accessing a class method that determines if an object is available
 car1.purchase()
 car2.purchase()
+
+# Checks if an object is an instance of a given class isinstance(object,class)
+print(isinstance(car1, Car))
+
+# Checks if a given class is a subclass of another class issubclass(class,class)
+print(issubclass(Student, Car))
 
 
 
