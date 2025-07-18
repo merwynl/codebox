@@ -1,0 +1,8 @@
+{
+    "name": "Adam",
+    "age": 27,
+    "year": 2024,
+    "major": "Architecture",
+    "gpa": 3.5,
+    "is_on_probation": false
+}
