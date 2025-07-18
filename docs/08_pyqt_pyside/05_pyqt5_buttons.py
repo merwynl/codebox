@@ -38,7 +38,7 @@ class MainWindow(QMainWindow):
         self.label.setGeometry(150,200,200,100)
         self.label.setStyleSheet("font-size: 16px")
         self.label.setAlignment(Qt.AlignHCenter | Qt.AlignVCenter)
-        self.label.setFont(QFont("Consolas", 18))
+        self.label.setFont(QFont("Verdana", 18))
 
     def on_click(self):
         print("Button clicked!")

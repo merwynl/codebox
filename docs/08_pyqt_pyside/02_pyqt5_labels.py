@@ -26,7 +26,7 @@ class MainWindow(QMainWindow):
 
         # Labels
         label = QLabel("Hello", self)
-        label.setFont(QFont("Consolas", 18))
+        label.setFont(QFont("Verdana", 18))
         label.setGeometry(0,0, 500, 100)
         label.setStyleSheet("color: #F0F0F0;"
                             "font-weight: bold;"
