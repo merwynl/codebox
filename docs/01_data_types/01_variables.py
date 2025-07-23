@@ -30,6 +30,7 @@ print("めちゃいい曲です！")
 
 ''' Comments '''
 # This is a comment
+
 ''' This is a doc-string '''
 
 # Strings — A string of alphanumeric characters

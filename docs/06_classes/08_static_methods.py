@@ -15,7 +15,7 @@ class Employee:
     def get_info(self):
         return f"{self.name} = {self.role}"
 
-    # We don't need to rely or create any objects to use a static method.
+    # We don't need to rely on or create any objects to use a static method.
     @staticmethod
     def is_valid_role(role):
         valid_roles= ["artist", "manager", "producer", "engineer", "developer", "support"]

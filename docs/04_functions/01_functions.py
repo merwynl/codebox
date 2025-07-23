@@ -61,3 +61,16 @@ def print_range():
     print("1","2","3","4","5", sep="-")
     return 0
 print_range()
+
+emote = ":)"
+
+def main():
+	# Normally global variables outside a local scope can only be accessed and not changed.
+	# GLobal indentifier allows for global variables to be modified
+	global emote
+	say("Is anyone there?")
+	emote = ":D"
+	say("Oh, hi!")
+
+def say(phrase):
+	print(phrase + " " + emote)

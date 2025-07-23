@@ -27,10 +27,10 @@ class Student:
     def get_info(self):
         return f"{self.name} {self.gpa}"
 
-    # Class Method
+    # Class Method - Gets access to class variables including count & total_gpa
     @classmethod
     def get_count(cls):
-        return f"Total number of students: {cls.count}" # Getting access to the class variables
+        return f"Total number of students: {cls.count}" # Returns incoming values from the class instance.
 
     @classmethod
     def get_average(cls):
@@ -38,7 +38,7 @@ class Student:
             return 0
         else:
                 # Return the results of incoming class variables.
-                return f'Average GPA is = {cls.total_gpa / cls.count:.2f}'
+                return f'Average GPA is = {cls.total_gpa / cls.count:.2f}' # Returns incoming values from an object
 
 # Creating objects/instance from a class.
 # Because we are invoking the Student class, the parameters will be passed into the class variable.

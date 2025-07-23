@@ -57,11 +57,11 @@ print(phrase.title())
 phrase = " white midnight "
 print(phrase.strip())
 
-# Strips out any white spacing from the left side of the string
+# Strips out any characters from the left side of the string. Optionally takes a string argument.
 phrase = " White midnight"
 print(phrase.lstrip())
 
-# Strips out any white spacing from the right side of the string
+# Strips out any characters from the right side of the string. Optionally takes a string argument.
 phrase = "White midnight "
 print(phrase.rstrip())
 
